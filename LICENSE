@@ -1,0 +1,30 @@
+Licence F4CVQ — Analyseur ROS NanoVNA
+Copyright (c) 2026 F4CVQ. Tous droits réservés sur le code.
+
+UTILISATION LIBRE ET GRATUITE
+Toute personne peut, gratuitement et sans limite de durée :
+  - télécharger, ouvrir et utiliser ce logiciel, à titre personnel, associatif ou dans un radio-club ;
+  - copier et partager le fichier ORIGINAL, non modifié, à condition de le faire gratuitement et
+    en conservant le nom et le logo F4CVQ ainsi que ce fichier de licence.
+
+CODE PROTÉGÉ
+Le code source, le logo F4CVQ et la présentation restent la propriété de F4CVQ.
+Sans autorisation écrite de F4CVQ, il est interdit :
+  - de modifier le logiciel et de diffuser une version modifiée ;
+  - de réutiliser tout ou partie du code dans un autre logiciel ;
+  - de vendre le logiciel ou de l'inclure dans un produit ou service payant ;
+  - de retirer ou de remplacer le nom, le logo ou la mention F4CVQ.
+
+Pour toute demande (adaptation, réutilisation, suggestion), ouvrez une « issue » sur
+https://github.com/F4CVQ/outils-nanovna/issues
+
+AUCUNE GARANTIE
+Ce logiciel est fourni « tel quel », sans garantie d'aucune sorte. Les mesures et conseils
+sont indicatifs : vérifiez toujours vos réglages d'antenne. F4CVQ ne pourra être tenu
+responsable d'aucun dommage lié à son utilisation.
+
+---------------------------------------------------------------------------------------------
+English summary: free to use for everyone, and the original unmodified file may be shared free of
+charge. The code remains the property of F4CVQ: no modification, redistribution of modified
+versions, code reuse or commercial use without written permission. Provided "as is", without
+warranty.
