@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/F4CVQ/outils-nanovna/releases/latest"><b>⬇ Télécharger la v1.1</b></a> ·
+  <a href="https://github.com/F4CVQ/outils-nanovna/releases/latest"><b>⬇ Télécharger la v1.1.1</b></a> ·
   <a href="#démarrage-rapide"><b>Démarrage rapide</b></a> ·
   <a href="#appareils-compatibles"><b>Appareils compatibles</b></a>
 </p>
@@ -113,6 +113,9 @@ Le dossier [`demo-s1p`](demo-s1p) contient des mesures simulées pour essayer l'
 Tout fonctionne **dans votre navigateur**. Aucune mesure n'est envoyée sur Internet. L'historique et les étalonnages sont gardés localement, dans le stockage du navigateur.
 
 ## Historique des versions
+
+### v1.1.1
+- Correction de l'erreur « Cannot read properties of undefined (reading 'f') » au balayage. Elle apparaissait quand une mesure avait moins de points que la précédente, par exemple après un passage en multibande.
 
 ### v1.1
 - Prise en charge de **tous les protocoles NanoVNA** avec détection automatique :
