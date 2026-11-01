@@ -47,6 +47,17 @@
 - **Effet d'une modification** sur chaque bande : par exemple « 20 m +279 kHz, 15 m +57 kHz, 40 m +13 kHz ».
 - **Compromis de longueur** pour les antennes à un seul fil (EFHW, OCF, dipôle sur ses harmoniques), et **ordre de réglage** pour les antennes à trappes ou en éventail.
 
+**Dipôle en éventail 40 / 20 / 15 m.** Trois bandes sont cochées (boutons bleus, en bas à gauche). Seuls les brins 20 m ont été raccourcis, et l'outil montre l'effet de cette coupe sur **chaque bande** :
+- le 20 m remonte de 279 kHz ;
+- le 15 m bouge de 57 kHz et le 40 m de 13 kHz, par interaction entre les fils ;
+- l'ancienne courbe reste affichée en pointillés.
+
+![Mode multibande : dipôle en éventail, effet d'une coupe sur chaque bande](docs/capture-multibande-eventail.png)
+
+**EFHW 80 / 40 / 20 / 15 / 10 m.** Cinq bandes sont cochées, avec un mini-graphique et un verdict pour chacune. Les harmoniques ne sont pas décalées de la même façon : l'outil le signale et calcule le **meilleur compromis de longueur** pour l'ensemble des bandes.
+
+![Mode multibande : EFHW sur 5 bandes et compromis de longueur](docs/capture-multibande-efhw.png)
+
 ### Balun et câble coaxial
 - Rapport du balun ou de l'unun (1:1 à 64:1) et type (courant, tension, unun). L'outil calcule l'**impédance réelle de l'antenne** et le **rapport conseillé**, y compris en multibande.
 - **Retrait de l'effet du coax** : indiquez la longueur et le type de câble (RG58, RG213, Aircell 7, Ecoflex…), et l'outil calcule les valeurs au point d'alimentation.
