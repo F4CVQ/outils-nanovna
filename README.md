@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/F4CVQ/outils-nanovna/releases/latest"><b>⬇ Télécharger la v1.1.2</b></a> ·
+  <a href="https://github.com/F4CVQ/outils-nanovna/releases/latest"><b>⬇ Télécharger la v1.3</b></a> ·
   <a href="#démarrage-rapide"><b>Démarrage rapide</b></a> ·
   <a href="#appareils-compatibles"><b>Appareils compatibles</b></a>
 </p>
@@ -29,6 +29,7 @@
 
 ### Réglage d'antenne
 - Verdict clair : **« Trop longue → raccourcir »** ou **« Trop courte → allonger »**, avec la correction en **cm** et une première coupe prudente (on ne rallonge pas un fil coupé).
+- Si le ROS est déjà inférieur à 1,5 à la fréquence visée, l'outil affiche **« Adaptée ✓ · Rien à couper »**, même si le creux du ROS tombe un peu à côté.
 - Sensibilité « 1 cm ≈ N kHz », bande passante ROS < 2 et ROS < 1,5, couverture de la bande.
 - **16 types d'antennes**, avec des conseils adaptés à chacun :
   - filaires et verticales : dipôle, dipôle en éventail, OCF/Windom, EFHW, quart d'onde, boucle, antenne raccourcie ;
@@ -40,10 +41,12 @@
 - **Impédance** R, X et |Z|.
 - **Abaque de Smith**.
 - **Mesure de référence** affichée en pointillés, pour voir l'effet d'une coupe.
+- **Lecture au survol** sur les courbes de ROS et d'impédance : une infobulle suit la souris et donne la fréquence, le ROS, Z (R ± jX) et |Z|.
 
 ### Mode multibande
 - Cochez plusieurs bandes : l'analyseur les balaie **une par une** et donne un verdict pour chacune.
-- Un **mini-graphique par bande**.
+- Une **grande courbe de ROS par bande**, avec une échelle adaptée à la mesure et les seuils 1,5 et 2 en pointillés. Survolez-la pour lire les valeurs, cliquez dessus pour régler cette bande en détail.
+- Une bande est **OK** si le ROS est inférieur à 1,5 à la cible ou inférieur à 2 sur au moins 90 % de la bande. Si le ROS ne passe sous 1,5 que sur une partie de la bande, l'outil indique « OK, meilleur en bas de bande » (ou en haut).
 - **Effet d'une modification** sur chaque bande : par exemple « 20 m +279 kHz, 15 m +57 kHz, 40 m +13 kHz ».
 - **Compromis de longueur** pour les antennes à un seul fil (EFHW, OCF, dipôle sur ses harmoniques), et **ordre de réglage** pour les antennes à trappes ou en éventail.
 
@@ -54,7 +57,7 @@
 
 ![Mode multibande : dipôle en éventail, effet d'une coupe sur chaque bande](docs/capture-multibande-eventail.png)
 
-**EFHW 80 / 40 / 20 / 15 / 10 m.** Cinq bandes sont cochées, avec un mini-graphique et un verdict pour chacune. Les harmoniques ne sont pas décalées de la même façon : l'outil le signale et calcule le **meilleur compromis de longueur** pour l'ensemble des bandes.
+**EFHW 80 / 40 / 20 / 15 / 10 m.** Cinq bandes sont cochées, avec une courbe et un verdict pour chacune. Les harmoniques ne sont pas décalées de la même façon : l'outil le signale et calcule le **meilleur compromis de longueur** pour l'ensemble des bandes.
 
 ![Mode multibande : EFHW sur 5 bandes et compromis de longueur](docs/capture-multibande-efhw.png)
 
@@ -113,6 +116,15 @@ Le dossier [`demo-s1p`](demo-s1p) contient des mesures simulées pour essayer l'
 Tout fonctionne **dans votre navigateur**. Aucune mesure n'est envoyée sur Internet. L'historique et les étalonnages sont gardés localement, dans le stockage du navigateur.
 
 ## Historique des versions
+
+### v1.3
+- **Courbes de ROS par bande agrandies** en mode multibande, avec une échelle adaptée à chaque mesure et les seuils 1,5 et 2 en pointillés.
+- **Infobulle au survol** : fréquence, ROS, Z (R ± jX) et |Z|, sur les courbes par bande et sur les graphiques ROS et Impédance.
+- **Verdict corrigé** : il tient compte du ROS réel dans la bande. Une antenne à ROS bas n'est plus signalée « trop longue » ou « trop courte » parce que le creux tombe juste à côté de la bande.
+- Une antenne log-périodique n'est plus signalée « hors plage » quand son ROS le plus bas tombe au bord du balayage.
+
+### v1.2
+- Connexion USB depuis **Chrome sur Android** (WebUSB).
 
 ### v1.1.2
 - Le diagnostic indique l'étalonnage **bande par bande** : les bandes choisies déjà étalonnées par l'outil, et celles qui restent à faire.
