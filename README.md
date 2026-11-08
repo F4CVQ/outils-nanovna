@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/F4CVQ/outils-nanovna/releases/latest"><b>⬇ Télécharger la v1.3</b></a> ·
+  <a href="https://github.com/F4CVQ/outils-nanovna/releases/latest"><b>⬇ Télécharger la v1.3.1</b></a> ·
   <a href="#démarrage-rapide"><b>Démarrage rapide</b></a> ·
   <a href="#appareils-compatibles"><b>Appareils compatibles</b></a>
 </p>
@@ -116,6 +116,9 @@ Le dossier [`demo-s1p`](demo-s1p) contient des mesures simulées pour essayer l'
 Tout fonctionne **dans votre navigateur**. Aucune mesure n'est envoyée sur Internet. L'historique et les étalonnages sont gardés localement, dans le stockage du navigateur.
 
 ## Historique des versions
+
+### v1.3.1
+- Le bouton **Démo** montre de nouveau un dipôle trop long : avec le verdict corrigé de la v1.3, il affichait « Adaptée ».
 
 ### v1.3
 - **Courbes de ROS par bande agrandies** en mode multibande, avec une échelle adaptée à chaque mesure et les seuils 1,5 et 2 en pointillés.
