@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/F4CVQ/outils-nanovna/releases/latest"><b>⬇ Télécharger la v1.3.1</b></a> ·
+  <a href="https://github.com/F4CVQ/outils-nanovna/releases/latest"><b>⬇ Télécharger la v1.4</b></a> ·
   <a href="#démarrage-rapide"><b>Démarrage rapide</b></a> ·
   <a href="#appareils-compatibles"><b>Appareils compatibles</b></a>
 </p>
@@ -24,6 +24,7 @@
 - **Un seul fichier HTML**, sans installation : il s'ouvre dans Chrome ou Edge, fonctionne hors ligne et n'envoie aucune donnée sur Internet.
 - **Connexion directe au NanoVNA** par USB (Web Serial), **tous modèles et firmwares** détectés automatiquement.
 - Ou **ouverture de fichiers** `.s1p`, `.s2p` et `.csv` venant de NanoVNA-Saver, NanoVNA-App, NanoVNA-QT ou de tout autre analyseur.
+- **Interface en français ou en anglais** (bouton FR/EN en haut de la page).
 
 ## Fonctionnalités
 
@@ -31,6 +32,7 @@
 - Verdict clair : **« Trop longue → raccourcir »** ou **« Trop courte → allonger »**, avec la correction en **cm** et une première coupe prudente (on ne rallonge pas un fil coupé).
 - Si le ROS est déjà inférieur à 1,5 à la fréquence visée, l'outil affiche **« Adaptée ✓ · Rien à couper »**, même si le creux du ROS tombe un peu à côté.
 - Sensibilité « 1 cm ≈ N kHz », bande passante ROS < 2 et ROS < 1,5, couverture de la bande.
+- **Assistant de coupe** : notez chaque coupe, l'outil mesure la vraie sensibilité de votre antenne et calcule la coupe suivante. Il garde le suivi étape par étape, et chaque étape peut être annulée.
 - **16 types d'antennes**, avec des conseils adaptés à chacun :
   - filaires et verticales : dipôle, dipôle en éventail, OCF/Windom, EFHW, quart d'onde, boucle, antenne raccourcie ;
   - beams : Yagi monobande, Yagi à trappes, Moxon, Hexbeam, Quad, HB9CV, log-périodique.
@@ -69,6 +71,10 @@
 - Estimation des **pertes du câble**, détection d'une **mesure bruitée** (connecteur douteux) ou d'un **étalonnage incohérent**.
 - **Historique par antenne** avec détection de **dérive** : résonance qui bouge, ROS qui se dégrade, pertes en hausse (eau dans le coax…).
 - Sauvegarde et restauration de l'historique en `.json`, export `.s1p` et image PNG.
+
+### Localisation de défaut sur le coax (TDR)
+- Un balayage large est converti en distance : coupure, court-circuit ou connecteur douteux apparaissent comme des pics, avec leur position en mètres.
+- Avec la longueur connue du câble, l'outil signale un défaut situé avant la fin du câble et estime la **vélocité réelle**.
 
 ### Étalonnage intégré
 - Étalonnage **OPEN / SHORT / LOAD** dans l'outil, mémorisé **pour chaque plage et chaque bande**.
@@ -116,6 +122,13 @@ Le dossier [`demo-s1p`](demo-s1p) contient des mesures simulées pour essayer l'
 Tout fonctionne **dans votre navigateur**. Aucune mesure n'est envoyée sur Internet. L'historique et les étalonnages sont gardés localement, dans le stockage du navigateur.
 
 ## Historique des versions
+
+### v1.4
+- **Assistant de coupe** : suivi des coupes et sensibilité mesurée sur votre antenne.
+- **Localisation de défaut sur le coax (TDR)**, avec estimation de la vélocité réelle.
+- **Interface en anglais** : bouton FR/EN, ou `?lang=en` à la fin de l'adresse.
+- **Liaison USB plus fiable** : tampon de réception agrandi, nouvel essai automatique après une lecture ratée, reprise de la connexion quand on rebranche le NanoVNA, messages d'erreur plus clairs.
+- **Mise à jour** : la page vérifie au plus une fois par jour s'il existe une version plus récente sur GitHub (ou à la demande en cliquant sur le numéro de version), propose de la télécharger puis de remplacer l'ancien fichier.
 
 ### v1.3.1
 - Le bouton **Démo** montre de nouveau un dipôle trop long : avec le verdict corrigé de la v1.3, il affichait « Adaptée ».
