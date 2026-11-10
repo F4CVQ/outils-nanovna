@@ -39,9 +39,10 @@
 - Bandes IARU Région 1 de 160 m à 23 cm, avec cible au centre de bande, en CW ou en SSB, ou au clic sur la courbe.
 
 ### Graphiques
-- **ROS** en échelle logarithmique, avec la bande grisée.
+- **Style écran NanoVNA** : fond noir, grille pointillée, traces jaune (CH0) et cyan, marqueurs numérotés comme sur l'appareil (▼1 cible, ▼2 ROS mini, ▼3 curseur), START / STOP sous la courbe. Le bouton **▣ NanoVNA** en haut de la page revient au style classique, et l'outil garde votre choix.
+- **ROS** avec la bande colorée et les repères 1,5 (vert) et 2 (orange) en pointillés.
 - **Impédance** R, X et |Z|.
-- **Abaque de Smith**.
+- **Abaque de Smith**, avec le cercle ROS 2.
 - **Mesure de référence** affichée en pointillés, pour voir l'effet d'une coupe.
 - **Lecture au survol** sur les courbes de ROS et d'impédance : une infobulle suit la souris et donne la fréquence, le ROS, Z (R ± jX) et |Z|.
 
@@ -124,6 +125,7 @@ Tout fonctionne **dans votre navigateur**. Aucune mesure n'est envoyée sur Inte
 ## Historique des versions
 
 ### v1.4
+- **Graphiques au style de l'écran du NanoVNA** (fond noir, marqueurs ▼ numérotés), avec un bouton pour revenir au style classique.
 - **Assistant de coupe** : suivi des coupes et sensibilité mesurée sur votre antenne.
 - **Localisation de défaut sur le coax (TDR)**, avec estimation de la vélocité réelle.
 - **Interface en anglais** : bouton FR/EN, ou `?lang=en` à la fin de l'adresse.
